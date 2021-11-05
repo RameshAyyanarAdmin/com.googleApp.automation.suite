@@ -13,6 +13,12 @@ public class InitializeTest {
 	
 	public static Properties config=null;
 	
+	
+	@BeforeMethod
+	public void beforeTest() {
+		Driver.initialize(ConfigReader.get("autURL"));	
+	}
+	
 	@AfterMethod
 	public void afterTest() {
 		DriverManager.getDriver().quit();
