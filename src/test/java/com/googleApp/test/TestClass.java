@@ -14,15 +14,13 @@ public class TestClass extends InitializeTest {
 	@Test
 	public void testCase1() {
 		try {
-		ExtentReportManager.setExtentTest(ExtentReportManager.report.startTest("Verify the homepage link"));
-		Driver.initialize(ConfigReader.get("autURL"));
-		Logger.logPASS("Browser launched successfully");			
+		ExtentReportManager.setExtentTest(ExtentReportManager.report.startTest("Verify the google homepage"));		
 		homePage=new HomePage();
 		homePage.homePageTitleValidation();	
-		Logger.logPASS("Validated home page title successfully");
+		Logger.logPASS("Validated home page successfully");
 		}
 		catch(Exception e) {
-			Logger.logFAIL("home page title validation failed");
+			Logger.logFAIL("home page validation failed");
 			e.printStackTrace();
 		}
 	}
@@ -30,9 +28,7 @@ public class TestClass extends InitializeTest {
 	@Test
 	public void testCase2() {
 		try {
-		ExtentReportManager.setExtentTest(ExtentReportManager.report.startTest("TestCase 2"));
-		Driver.initialize(ConfigReader.get("autURL"));
-		Logger.logPASS("Browser launched successfully");
+		ExtentReportManager.setExtentTest(ExtentReportManager.report.startTest("Verify the google search box"));
 		homePage=new HomePage();
 		homePage.searchBoxValidation();
 		Logger.logPASS("Validated search box functionality successfully");

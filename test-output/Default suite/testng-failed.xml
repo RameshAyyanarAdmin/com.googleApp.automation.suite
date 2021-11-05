@@ -5,6 +5,8 @@
     <classes>
       <class name="com.googleApp.test.TestClass">
         <methods>
+          <include name="beforeTest"/>
+          <include name="testCase1"/>
           <include name="beforeTestExecution"/>
           <include name="afterTestExecution"/>
           <include name="afterTest"/>
